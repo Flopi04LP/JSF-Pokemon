@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form id="eyecolor-form">  
+            <h:outputLabel for="eyecolor">Eye Color </h:outputLabel>  
+            <h:graphicImage library="img" name="#{characterBean.getFilename()}.png"/>
+            <h:selectOneRadio value = "#{characterBean.eyecolor}"> 
+                <f:selectItem itemValue = "b" itemLabel = "Blaue Augen" /> 
+                <f:selectItem itemValue = "g" itemLabel = "Grüne Augen" />
+             </h:selectOneRadio>
+            <h:commandButton id="submit-button" value="Submit" action="haircolorselector.xhtml"/> 
+        </h:form>  
+
+    </h:body>
+</html>
+
